@@ -51,5 +51,5 @@ app.post('/upload', upload.single('media'), (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 서버 실행 중: http://localhost:${PORT}`);
+  console.log(`🚀 서버 실행!`);
 });
