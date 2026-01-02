@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  upload-server:
+    container_name: upload-server
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../uploads:/app/uploads
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    restart: unless-stopped
